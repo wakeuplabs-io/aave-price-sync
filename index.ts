@@ -19,6 +19,7 @@ async function updatePrices() {
 
 
 function main() {
+  updatePrices();
   setInterval(updatePrices, Number(MINUTES ?? 1) * 60 * 1000);
 }
 

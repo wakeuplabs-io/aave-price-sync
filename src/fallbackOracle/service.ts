@@ -25,9 +25,6 @@ export class FallbackOracleService {
       "function setAssetPrice(address asset, uint256 price) external"
     ], this.signer);
 
-    const address = await this.signer.getAddress();
-    providerTestnet.getBalance(address).then(balance => console.log(balance));
-
     const gasPrice = await oracleContract.setAssetPrice.estimateGas(asset, price);
     const tx = await oracleContract.setAssetPrice(asset, price, {
       gasPrice: gasPrice

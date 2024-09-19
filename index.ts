@@ -1,5 +1,6 @@
 import { FallbackOracleService } from "./src/fallbackOracle/service";
 import { OracleService } from "./src/oracle/service";
+import { MINUTES } from "./src/utils/config";
 import { Address, FALLBACK_ADDRESS, ORACLES } from "./src/utils/constants";
 import { signer } from "./src/utils/provider";
 
@@ -18,9 +19,7 @@ async function updatePrices() {
 
 
 function main() {
-
-  updatePrices();
-  // setInterval(updatePrices, Number(MINUTES ?? 1) * 60 * 1000);
+  setInterval(updatePrices, Number(MINUTES ?? 1) * 60 * 1000);
 }
 
 main();

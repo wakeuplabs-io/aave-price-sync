@@ -1,7 +1,6 @@
-import { ethers } from "ethers";
-import { Address } from "../utils/constants";
-import { BigNumberish } from "ethers";
-import { providerTestnet } from "../utils/provider";
+import { BigNumberish, ethers } from "ethers";
+import { Address } from "../../utils/constants";
+import { providerTestnet } from "../../utils/provider";
 
 
 export class FallbackOracleService {
